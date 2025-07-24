@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx:latest
+    container_name: cv-web
+    ports:
+      - "8080:80"  # 윈도우PC 8080포트를 컨테이너 80포트와 연결
+    volumes:
+      - ./:/usr/share/nginx/html:ro
